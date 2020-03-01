@@ -1,0 +1,53 @@
+body {
+    text-align: center;
+	 padding: 25px;
+  background: url(pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*form {
+	padding-right:100px;
+}*/
+div{
+	padding-top: 100px;
+	padding-right:400px;
+	padding-left:400px;
+}
+
+
+.container {
+  border-radius: 10px;
+  background-color:black;
+  border: 1px solid black;
+  padding: 40px;
+  opacity: 0.8;
+}
+label {
+  padding: 30px 10px 30px 0;
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+input[type=submit]:hover {
+  background-color: #ecb779;
+}
+input[type=submit] {
+  background-color: white;
+  color: black;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+input{
+ /* width: 100%;*/
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+ 
+}
