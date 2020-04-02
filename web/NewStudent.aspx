@@ -27,7 +27,7 @@
                     <asp:Label ID="Label2" runat="server" Text="First Name:"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="fNametxt" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -38,18 +38,7 @@
                     <asp:Label ID="Label3" runat="server" Text="Last Name:"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                </td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    <asp:Label ID="Label4" runat="server" Text="ID:"></asp:Label>
-                </td>
-                <td>
-                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="lNametxt" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -60,8 +49,10 @@
                     <asp:Label ID="Label5" runat="server" Text="Gender"></asp:Label>
                 </td>
                 <td>
-                    <asp:RadioButton ID="Female" runat="server" Checked="True" />
-                    <asp:RadioButton ID="male" runat="server" />
+                    <asp:RadioButtonList ID="radioBtn" runat="server">
+                        <asp:ListItem Value="m">Male</asp:ListItem>
+                        <asp:ListItem Value="f">Female</asp:ListItem>
+                    </asp:RadioButtonList>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -72,7 +63,7 @@
                     <asp:Label ID="Label6" runat="server" Text="Birth Date:"></asp:Label>
                 </td>
                 <td>
-                    <asp:Calendar ID="Calendar1" runat="server" Height="70px" Width="236px"></asp:Calendar>
+                    <asp:Calendar ID="calender" runat="server" Height="70px" Width="236px"></asp:Calendar>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -83,7 +74,7 @@
                     <asp:Label ID="Label7" runat="server" Text="e-mail:"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="emailtxt" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -94,7 +85,7 @@
                     <asp:Label ID="Label8" runat="server" Text="Phone Number:"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="phonetxt" runat="server"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -105,7 +96,7 @@
                     <asp:Label ID="Label9" runat="server" Text="Adress"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox8" runat="server" TextMode="MultiLine"></asp:TextBox>
+                    <asp:TextBox ID="addresstxt" runat="server" TextMode="MultiLine"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -116,7 +107,7 @@
                     <asp:Label ID="Label10" runat="server" Text="Password"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox6" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="passtxt" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -138,7 +129,8 @@
                     <asp:Label ID="Label12" runat="server" Text="Nationality"></asp:Label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:DropDownList ID="nationality" runat="server">
+                        <asp:ListItem>egypt</asp:ListItem>
                     </asp:DropDownList>
                 </td>
                 <td>&nbsp;</td>
@@ -150,7 +142,8 @@
                     <asp:Label ID="Label13" runat="server" Text="Faculty"></asp:Label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownList2" runat="server">
+                    <asp:DropDownList ID="faculty" runat="server">
+                        <asp:ListItem>computerScience</asp:ListItem>
                     </asp:DropDownList>
                 </td>
                 <td>&nbsp;</td>
@@ -162,7 +155,7 @@
                     <asp:Label ID="Label14" runat="server" Text="Bus:"></asp:Label>
                 </td>
                 <td>
-                    <asp:CheckBox ID="yes" runat="server" />
+                    <asp:CheckBox ID="bus" runat="server" />
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -182,7 +175,7 @@
         </table>
     <div>
     
-        <asp:Button ID="Button1" runat="server" Text="Submit" />
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
     
     </div>
     </form>
